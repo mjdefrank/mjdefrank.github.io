@@ -27,3 +27,7 @@ img{
 .navbar {
     opacity: .5;
 }
+
+#portrait{
+    max-width: 25%;
+}
