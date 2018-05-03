@@ -21,7 +21,9 @@ body {
     border: solid 3px grey;
 
 } */
-
+img{
+    border: solid 1px grey;
+}
 .navbar {
     opacity: .5;
 }
