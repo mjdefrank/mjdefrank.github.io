@@ -14,13 +14,7 @@ body {
 #about{
     break-before: always;
 }
-/* 
-.card{
-    opacity: .95;
-    background-color: white;
-    border: solid 3px grey;
 
-} */
 img{
     border: solid 1px grey;
 }
@@ -31,4 +25,16 @@ img{
 #portrait{
     max-width: 25%;
     border: none;
+}
+
+#project{
+    padding: 15px;
+    }
+
+#contact {
+    padding: 25px;
+}
+
+#externalLink:hover {
+    border: solid 2px black;
 }
