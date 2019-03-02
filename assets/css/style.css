@@ -1,14 +1,17 @@
 body {
     /* background-color: #FCFDFE; */
-    background-image: url('../images/laptop1.jpg');
+    background-image: url('../images/lakeerie.jpg');
     background-size: cover;
 }
-
+.navbar-brand .nav-link {
+    color: white;
+}
 .jumbotron, .card {
     opacity: .95;
     text-align: center;
-    border: solid 3px grey;
-    background-color: white;
+    border: solid 2px rgba(109, 109, 109, 0.5);
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
 }
 
 #about{
@@ -37,4 +40,9 @@ img{
 
 #externalLink:hover {
     border: solid 2px black;
+}
+
+.card-img-top{
+    background-color: rgba(240, 255, 255, 0.75);
+    
 }
