@@ -4,6 +4,14 @@ body {
     background-attachment: fixed;
 }
 
+#smsIcon {
+    display: none;
+}
+
+.contactIcons {
+    min-width: 33%
+}
+
 .card.col-sm-8.col-md-5 {
     margin: 0 auto;
     margin-bottom: 50px;
@@ -59,13 +67,11 @@ a.nav-link:hover {
 a>img.card-img-top {
     max-width: 10vw;
     margin: 0 auto;
+    background-color: transparent;
+    border: none;
 }
 .card-img-top:hover{
     transform: scale(1.05);
-}
-
-.under-construction {
-    text-decoration: line-through;
 }
 
 hr.my-4 {
@@ -81,7 +87,7 @@ summary {
 
 @media (max-width: 576px) {
     div.col-xs-10 a img.card-img-top {
-        max-width: 25%;
+        max-width: 75px;
         margin: 20px 0;
     }
 
@@ -100,5 +106,13 @@ summary {
     .col-xs-12.col-sm-8.offset-sm-2 {
         margin: 0 auto;
         max-width: 95vw !important;
+    }
+
+    .col-sm-3.col-xs-10.offset-xs-1 {
+        margin-bottom: 20px;
+    }
+
+    #smsIcon {
+        display: block;
     }
 }
