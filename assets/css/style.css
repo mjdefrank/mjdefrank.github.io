@@ -1,11 +1,32 @@
 body {
-    /* background-color: #FCFDFE; */
     background-image: url('../images/lakeerie.jpg');
     background-size: cover;
+    background-attachment: fixed;
 }
+
+.card.col-sm-8.col-md-5 {
+    margin: 0 auto;
+    margin-bottom: 50px;
+
+    & > a>img {
+        margin-top: 20px;
+        max-width: 50%;
+    }
+}
+
+.card.col-xs-12.col-sm-10 {
+    margin: 0 auto;
+}
+
 .navbar-brand .nav-link {
     color: white;
+
 }
+
+a.nav-link:hover {
+    color: black !important;
+}
+
 .jumbotron, .card {
     opacity: .95;
     text-align: center;
@@ -18,9 +39,6 @@ body {
     break-before: always;
 }
 
-img{
-    border: solid 1px grey;
-}
 .navbar {
     opacity: .5;
 }
@@ -38,11 +56,49 @@ img{
     padding: 25px;
 }
 
-#externalLink:hover {
-    border: solid 2px black;
+a>img.card-img-top {
+    max-width: 10vw;
+    margin: 0 auto;
+}
+.card-img-top:hover{
+    transform: scale(1.05);
 }
 
-.card-img-top{
-    background-color: rgba(240, 255, 255, 0.75);
+.under-construction {
+    text-decoration: line-through;
+}
+
+hr.my-4 {
+    margin: 12px 0;
+}
+
+summary {
+    text-align: left;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 576px) {
+    div.col-xs-10 a img.card-img-top {
+        max-width: 25%;
+        margin: 20px 0;
+    }
+
+    #linkedInLogo {
+        transform: translateX(5px);
+    }
     
+    #linkedInLogo:hover {
+        transform: translateX(5px) scale(1.05);
+    }
+
+    .card.col-sm-8.col-md-5 {
+        margin: 0px 50px 50px 50px;
+    }
+
+    .col-xs-12.col-sm-8.offset-sm-2 {
+        margin: 0 auto;
+        max-width: 95vw !important;
+    }
 }
