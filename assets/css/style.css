@@ -2,6 +2,11 @@ body {
     background-image: url('../images/lakeerie.jpg');
     background-size: cover;
     background-attachment: fixed;
+
+    &>div.row {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 #smsIcon {
@@ -9,7 +14,12 @@ body {
 }
 
 .contactIcons {
-    min-width: 33%
+    min-width: 33%;
+    color: white;
+
+    & a, i {
+        color: white;
+    }
 }
 
 .card.col-sm-8.col-md-5 {
@@ -60,8 +70,12 @@ a.nav-link:hover {
     padding: 15px;
     }
 
-#contact {
+.contact {
     padding: 25px;
+
+    & div>a>img {
+        width: 50px;
+    }
 }
 
 a>img.card-img-top {
@@ -70,8 +84,12 @@ a>img.card-img-top {
     background-color: transparent;
     border: none;
 }
-.card-img-top:hover{
-    transform: scale(1.05);
+.card-img-top:hover, .contactIconWrapper {
+    transition: transform 0.5s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 hr.my-4 {
@@ -85,18 +103,23 @@ summary {
     margin-bottom: 30px;
 }
 
+details {
+    margin-top: 15px;
+}
+
+#about {
+    opacity: 1;
+
+    & img {
+        border-radius: 15px;
+        border: solid 2px rgba(109, 109, 109, 0.5);
+    }
+}
+
 @media (max-width: 576px) {
     div.col-xs-10 a img.card-img-top {
         max-width: 75px;
         margin: 20px 0;
-    }
-
-    #linkedInLogo {
-        transform: translateX(5px);
-    }
-    
-    #linkedInLogo:hover {
-        transform: translateX(5px) scale(1.05);
     }
 
     .card.col-sm-8.col-md-5 {
