@@ -20,6 +20,26 @@
   gtag('config', 'G-PXJS0CWSLD');
 </script>
 
+<script>
+    function trackButtonClick(elementId) {
+        gtag('event', 'button_click', {
+            'button_name': elementId,
+            'screen_name': 'Contact & Resume',
+
+        });
+    };
+
+    function addButtonClickListener(buttonId) {
+        document.getElementById(buttonId).addEventListener('click', function() {
+            trackButtonClick(buttonId);
+        });
+    };
+    addButtonClickListener('friendFinderDemo');
+    addButtonClickListener('gooftubeDemo');
+    addButtonClickListener('triviaGameDemo');
+    addButtonClickListener('crystalGameDemo');
+</script> 
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navHeader">
         <a class="navbar-brand" href="./index.html">Michael DeFrank</a>
@@ -50,7 +70,7 @@
             <h1 class="display-4">Portfolio</h1>
             <div class="row">
                 <div class="card col-sm-8 col-md-5">
-                    <a href="https://mjd-friend-finder-489a7d95c7a4.herokuapp.com/survey"><img class="card-img-top" src="./assets/images/friendFinderThumb.PNG" alt="Card image cap"></a>
+                    <a id="friendFinderDemo" href="https://mjd-friend-finder-489a7d95c7a4.herokuapp.com/survey"><img class="card-img-top" src="./assets/images/friendFinderThumb.PNG" alt="Card image cap"></a>
                     <div class="card-body">
                         <h5 class="card-title">Friend Finder</h5>
                         <p class="card-text">An exercise in ExpressJS using a GET and POST routes to push user data into a library of answers and return the user with the existing entry the least difference from theirs.  Seeded with some pop culture figures.</p>
@@ -58,7 +78,7 @@
                     </div>
                 </div>
                 <div class="card col-sm-8 col-md-5" >
-                    <a href="https:///mjdefrank.github.io/GoofTube"><img class="card-img-top" src="./assets/images/goofTube.PNG" alt="Card image cap"></a>
+                    <a id="goofTubeDemo" href="https:///mjdefrank.github.io/GoofTube"><img class="card-img-top" src="./assets/images/goofTube.PNG" alt="Card image cap"></a>
                     <div class="card-body">
                         <h5 class="card-title">Goof Tube</h5>
                         <p class="card-text">AJAX &amp; Giphy Click the buttons to pull 10 still gifs of popular comedy shows from the Giphy API. Click on each of the gifs to animate or pause the gifs. If you don't see your favorite show, use the search bar to add a program.</p>
@@ -69,7 +89,7 @@
             <br />
             <div class="row">
                 <div class="card col-sm-8 col-md-5" >
-                    <a href="https:///mjdefrank.github.io/TriviaGame"><img class="card-img-top" src="./assets/images/triviaGame.PNG" alt="Card image cap"></a>
+                    <a id="triviaGameDemo" href="https:///mjdefrank.github.io/TriviaGame"><img class="card-img-top" src="./assets/images/triviaGame.PNG" alt="Card image cap"></a>
                     <div class="card-body ">
                         <h5 class="card-title">X-Men Trivia Game</h5>
                         <p class="card-text">Think you know the X-men? Test your trivia knowledge! Use the radio buttons to complete the quiz in the alotted time to receive your score.</p>
@@ -77,7 +97,7 @@
                     </div>
                 </div>
                 <div class="card col-sm-8 col-md-5">
-                    <a href="https:///mjdefrank.github.io/MagicCrystalGame"><img class="card-img-top" src="./assets/images/magicCrystal.PNG" alt="Card image cap"></a>
+                    <a id="crystalGameDemo" href="https:///mjdefrank.github.io/MagicCrystalGame"><img class="card-img-top" src="./assets/images/magicCrystal.PNG" alt="Card image cap"></a>
                     <div class="card-body">
                         <h5 class="card-title">Magic Crystal Game</h5>
                         <p class="card-text">A basic game where the crystals are assigned random values and the player must match the goal exactly.  The game resets upon each win or loss.</p>

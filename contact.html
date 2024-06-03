@@ -19,6 +19,22 @@
 
   gtag('config', 'G-PXJS0CWSLD');
 </script>
+<script>
+    function trackButtonClick(elementId) {
+        gtag('event', 'button_click', {
+            'button_name': elementId,
+            'screen_name': 'Contact & Resume'
+        });
+    }
+
+    function addButtonClickListener(buttonId) {
+        document.getElementById(buttonId).addEventListener('click', function() {
+            trackButtonClick(buttonId);
+        });
+    };
+    addButtonClickListener('resumeBtn');
+    addButtonClickListener('gitHubBtn');
+</script> 
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navHeader">
@@ -73,10 +89,10 @@
                 <h1 class="display-4">Resume & Github</h1>
                 <div class="contact row">
                     <div class="col-sm-6 col-xs-10  offset-xs-1">
-                        <a href="./assets/Mike_DeFrank_Resume_June_24.pdf" target="_blank"><img class="card-img-top" src="./assets/images/resumethumb.PNG" alt="Resume Thumbnail"></a>
+                        <a id="resumeBtn" href="./assets/Mike_DeFrank_Resume_June_24.pdf" target="_blank"><img class="card-img-top" src="./assets/images/resumethumb.PNG" alt="Resume Thumbnail"></a>
                     </div>  
                     <div class="col-sm-6 col-xs-10  offset-xs-1" >
-                        <a href="https://github.com/mjdefrank/"><img class="card-img-top" src="./assets/images/github-mark-white.svg" alt="Git Hub logo"></a>
+                        <a id="gitHubBtn" href="https://github.com/mjdefrank/"><img class="card-img-top" src="./assets/images/github-mark-white.svg" alt="Git Hub logo"></a>
                     </div>             
                 </div>
             </div>
